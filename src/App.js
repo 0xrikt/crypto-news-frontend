@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Analytics } from '@vercel/analytics/react';
 import NewsList from './NewsList';
 import NewsDetail from './NewsDetail';
 import './i18n';
@@ -34,6 +35,7 @@ function App() {
           <Route path="/news/:id" element={<NewsDetail />} />
         </Routes>
       </div>
+      <Analytics />
     </Router>
   );
 }
